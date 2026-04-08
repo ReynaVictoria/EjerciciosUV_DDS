@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estaciones</title>
+</head>
+
+<body>
+    <h1>Listado de estaciones: HTML puro</h1>
+    <form action="" border="1" style="border: 1px solid black; padding: 10px; margin-bottom: 20px; width: 80%;">
+        <table border="1" width="100%">
+            <tr>
+                <td> <label for="texto">Texto:</label>
+                    <input type="text" id="texto" name="texto">
+                </td>
+                <td>
+                    <label for="barrio">Barrio:</label>
+                    <select name="barrio" id="barrio">
+                        <option value="">Seleccione un barrio</option>
+                        <option value="barrio1">Barrio 1</option>
+                        <option value="barrio2">Barrio 2</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="inactiva">Incluir estaciones inactivas</label>
+                    <input type="checkbox" id="inactiva" name="inactiva">
+                </td>
+                <td align="right"> <button type="submit">Filtrar</button>
+                </td>
+            </tr>
+
+
+
+
+
+        </table>
+    </form>
+
+
+
+    <table style="border: 1px solid black " width="80%">
+        <thead>
+            <tr>
+                <th style="border: 1px solid black;
+                ">Nro</th>
+                <th style="border: 1px solid black;
+                ">Nombre</th>
+                <th style="border: 1px solid black;
+                ">Dirección</th>
+                <th style="border: 1px solid black;
+                ">Barrio</th>
+                <th style="border: 1px solid black;
+                ">Activa</th>
+            </tr>
+        </thead>
+
+        <tr>
+            <td style="border: 1px solid black;
+            ">1</td>
+            <td style="border: 1px solid black;
+            ">Estación 1</td>
+            <td style="border: 1px solid black;
+            ">Dirección 1</td>
+            <td style="border: 1px solid black;
+            ">Barrio 1</td>
+            <td style="border: 1px solid black;
+            ">Si</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;
+            ">2</td>
+            <td style="border: 1px solid black;
+            ">Estación 2</td>
+            <td style="border: 1px solid black;
+            ">Dirección 2</td>
+            <td style="border: 1px solid black;
+            ">Barrio 2</td>
+            <td style="border: 1px solid black;
+            ">Si</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;
+            ">3</td>
+            <td style="border: 1px solid black;
+            ">Estación 3</td>
+            <td style="border: 1px solid black;
+            ">Dirección 3</td>
+            <td style="border: 1px solid black;
+            ">Barrio 3</td>
+            <td style="border: 1px solid black;
+            ">Si</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;
+            ">4</td>
+            <td style="border: 1px solid black;
+            ">Estación 4</td>
+            <td style="border: 1px solid black;
+            ">Dirección 4</td>
+            <td style="border: 1px solid black;
+            ">Barrio 4</td>
+            <td style="border: 1px solid black;
+            ">No</td>
+        </tr>
+    </table>
+</body>
+
+</html>

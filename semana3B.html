@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Estaciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: pink;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">BiciAlquileres</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 w-100">
+                    <li class="nav-item flex-fill">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item flex-fill">
+                        <a class="nav-link" href="#">Alquileres</a>
+                    </li>
+                    <li class="nav-item flex-fill">
+                        <a class="nav-link" href="#">Estaciones</a>
+                    </li>
+                    <li class="nav-item flex-fill">
+                        <a class="nav-link" style="color: white;" href="#">Mis Datos</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <h1 class="mt-4 mb-4 ms-3">Mi Perfil</h1>
+    <table>
+        <tr>
+            <td>
+                <div class="card me-3 ms-3" style="width: 18rem;">
+                    <img src="https://imgs.search.brave.com/COXl6f97UsQ_4GhlfbmhMnuSpM45xh79oQxSYK4qKy8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjgv/NzM4LzE5Ny9zbWFs/bC9taW5pbWFsaXN0/LWxpbmUtZHJhd2lu/Zy11c2VyLXBlcnNv/bi1wcm9maWxlLWFj/Y291bnQtaHVtYW4t/aWNvbi1zeW1ib2wt/dmVjdG9yLmpwZw"
+                        class="card-img-top" alt="...">
+                </div>
+
+            </td>
+
+
+            <td>
+                <table>
+                    <tr>
+                        <td><label for="Nombre">Nombre:</label>
+                        <input type="text" id="Nombre" name="Nombre"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Apellido">Apellido:</label>
+                        <input type="text" id="Apellido" name="Apellido"></td>
+                    </tr>
+                </table>
+
+            </td>
+
+
+        </tr>
+    </table>
+
+    <div class="mt-4 ms-3">
+        <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico:</label>
+            <input type="email" class="form-control" id="email" name="email">
+        </div>
+
+        <div class="mb-3">
+            <label for="nacimiento" class="form-label">Fecha de Nacimiento:</label>
+            <input type="date" class="form-control" id="nacimiento" name="nacimiento">
+        </div>
+
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono:</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono">
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="nombre2" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre2" name="nombre2">
+            </div>
+            <div class="col">
+                <label for="apellido2" class="form-label">Apellido:</label>
+                <input type="text" class="form-control" id="apellido2" name="apellido2">
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col">
+                <label for="email2" class="form-label">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email2" name="email2">
+            </div>
+            <div class="col">
+                <label for="telefono2" class="form-label">Teléfono:</label>
+                <input type="tel" class="form-control" id="telefono2" name="telefono2">
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
