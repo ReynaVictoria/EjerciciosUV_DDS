@@ -1,0 +1,50 @@
+[
+    {
+        "nombre": "Juan",
+        "correo": "juan@example.com",
+        "profesion": "Ingeniero",
+        "fechaNacimiento": "1990-01-01"
+    },
+    {
+        "nombre": "María",
+        "correo": "maria@example.com",
+        "profesion": "Diseñadora",
+        "fechaNacimiento": "1985-05-15"
+    },
+    {
+        "nombre": "Pedro",
+        "correo": "pedro@example.com",
+        "profesion": "Desarrollador",
+        "fechaNacimiento": "1992-12-10"
+    },
+    {
+        "nombre": "Ana",
+        "correo": "ana@example.com",
+        "profesion": "Arquitecta",
+        "fechaNacimiento": "1988-08-20"
+    },
+    {
+        "nombre": "Luis",
+        "correo": "luis@example.com",
+        "profesion": "Medico",
+        "fechaNacimiento": "1987-03-25"
+    },
+    {
+        "nombre": "Sofia",
+        "correo": "sofia@example.com",
+        "profesion": "Enfermera",
+        "fechaNacimiento": "1990-07-12"
+    },
+    {
+        "nombre": "Carlos",
+        "correo": "carlos@example.com",
+        "profesion": "Cientifico",
+        "fechaNacimiento": "1989-11-30"
+    },
+    {
+        "nombre": "Laura",
+        "correo": "laura@example.com",
+        "profesion": "Psicologa",
+        "fechaNacimiento": "1986-09-18"
+    }
+]

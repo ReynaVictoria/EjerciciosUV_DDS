@@ -77,3 +77,5 @@ console.log(personMasGrande(arrayPersonas));
 console.log("Profesiones únicas:");
 console.log(obtenerProfesionesUnicas(arrayPersonas));
 
+export { Persona, arrayPersonas, personasMayoresDeEdad, hallarPersonaXProfesion, personMasGrande, obtenerProfesionesUnicas };
+

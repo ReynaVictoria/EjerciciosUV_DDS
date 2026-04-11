@@ -1,0 +1,47 @@
+/*
+Un modulo es un archivo que puede importar o exportar contenido
+
+// persona.js
+export class Persona {
+ constructor(nombre) {
+ this.nombre = nombre;
+ }
+ saludar() {
+ console.log("Hola, soy " + this.nombre);
+ }
+}
+
+
+// main.js
+import { Persona } from './persona.js';
+const juan = new Persona("Juan");
+juan.saludar(); // Hola, soy Juan
+
+ARCHIVO package.json 
+Generado automaticamente por el comando npm init
+{
+ "type": "module"
+}
+
+Con el valor type indicamos si queremos que se interpreten
+los arhivos con la convencion CommmonJs o con la convencion de modulo ES
+
+"type": "module" es la sintaxis de ES6
+
+Exportar de persona.servicio.js
+const personasServicio = {
+ mayoresDeEdad: mayoresDeEdad,
+ obtenerPersonaMasGrande: obtenerPersonaMasGrande,
+ personasXProfesion: personasXProfesion,
+ obtenerProfesiones: _obtenerProfesiones
+};
+export { personasServicio };
+
+E importar en index.js
+import { personas } from './acceso-a-datos/personas.datos.js';
+import { personasServicio } from './logica-de-negocio/personas.servicio.js'
+
+
+
+
+*/
