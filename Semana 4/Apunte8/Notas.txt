@@ -1,0 +1,102 @@
+/*
+Js se usa para crEar paginas dinamicas.
+
+DOM (Document Object Model), estructura de un documento HTML.
+Una pagina HTML esta formada por un arbol de etiquetas relacionadas entre si (Arbol DOM)
+
+A traves del DOM los proRamas pueden aceder dinamicamente y modificar el contenido,
+estructura y estilo de un documento HTML.
+
+Objeto Document
+En Js la forma de acceder al DOM es a traves del objeto Document
+representa el arbol DOM de la pagina o la pagina de la pestaña del navedador en la que nos encontramos.
+
+Elementos del interior:
+ELEMENT: etiqueta HTMLElement
+NODE: unidad basica, puede ser un ELEMENT o un nodo de texto.
+
+Establecer referencias a objetos
+
+El DOM define la manera en que objetos y elementos se relacionan entre si en el navegador y en el documento.
+En Js un objeto tiene un nombre unico
+Cuando existe mas de un objeto del mismo tipo en un documento web, se organizan en un vector.
+
+En documento html:
+
+<div id="Idiomas">
+<li>Español</li>
+<li>Ingles</li>
+<li>Frances</li>
+</div>
+
+Para hacer referencia a este elemento se puede usar la función getElementById
+En JavaScript
+
+document.getElementById("Idiomas")
+Y realizar alguna operación sobre el mismo, en este caso agregamos un nuevo elemento:
+document.getElementById("Idiomas").innerHTML += "<li>Portugues</li>"
+
+Manipular las propiedades y funciones de objetos
+
+Objeto.propiedad = valor
+
+Objeto.funcion(parametro)
+
+Eventos
+Representan la interacción del usuario con la computadora
+
+<element onevent="script">....</element>
+
+Ejemplo
+<div id="midivision" onClick="javascript:miFuncion('bar');">
+Aquí va otro texto
+</div>
+
+Explicacion: 
+-- onClick = "..." cuando el usuario hace click en el <div>
+-- miFuncion('bar') la funcion JavaScript que se ejecuta al hacer click
+-- 'bar' argumento de la funcion
+
+Otra forma de manipular eventos es tratarlos como propiedades de los elementos
+
+objeto.evento = funcion
+
+Ejemplo:
+document.getElementVyId("miDivision").onclick = hazAlgo
+
+Explicacion:
+--document.getElementVyId("miDivision") busca el elemento segun su id
+-- .onClick = hazAlgo asigna el evento + accion
+
+
+Propagacion 
+EVENTO → Ventana → Document → HTML → BODY → DIV → DESTINO
+RESPUESTA → DIV → BODY → HTML → Document → Ventana → EVENTO
+
+3 etapas
+-- captura: se da cuando el evento se esta trasladando a su destino
+-- blanco: llega al blanco o destino
+-- burbujeo: el evento regresa a su posicion original.
+
+Ciertos eventos pueden estar pendientes de ciertos eventos
+Oyente de eventos - Funcion addEventListener
+
+Cuando el evento ocurre se lleva a cabo alguna funcion, en la etapa de captura o burbujeo
+
+Captura - TRUE
+Burbujeo - FALSE
+
+objeto.addEventListener(evento, funcion, momento);
+
+Ejemplo
+document.getElementById("mydivision").addEventListener("click", hazAlgo, false);
+
+Librerias de terceros
+Framework JavaScript, la mayoria usa un Virtual DOM, es decir, 
+una abstraccion para automatizarlo sin que el programador tenga que manipularlo a bajo nivel
+
+Ejemplo: React
+
+
+
+*/
