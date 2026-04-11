@@ -1,0 +1,247 @@
+/*
+
+Un objeto es una colección de propiedades.
+Una propiedad es una asociación entre un nombre o clave, y un valor. Su valor puede ser una variable o una función.
+Si una propiedad tiene por valor una función, se le llama método.
+
+Es un lenguaje prototipado. Los objetos heredan de otros objetos y en última instancia dle prototipo de Object
+
+
+Notación de punto:
+objeto.propiedad
+
+Notación de corchetes:
+objeto["propiedad"]
+
+Una vez definido un objeto se pueden crear nuevas propiedades
+persona.pais = 'Argentina'
+
+Las propiedades no asignadas son undefined
+
+Crear objetos:
+-Con notación literal
+const juan = {
+    nombre: 'Juan',
+    correo: 'juan@example.com',
+    fechaNacimiento: new Date(1990, 5, 15),
+    saludar: function() {console.log('Hola soy ' + this.nombre);}
+    };
+
+this hace referencia al objeto actual
+
+-Con new Object
+const persona = new Object();
+persona.nombre = 'Juan';
+persona.correo = 'juan@example.com';
+persona.fechaNacimiento = new Date(1990, 5, 15);
+persona.saludar = function() {console.log('Hola soy ' + this.nombre);
+};
+
+-Con una función constructora
+function Persona(nombre, correo, fechaNacimiento) {
+    this.nombre = nombre;
+    this.correo = correo;
+    this.fechaNacimiento = fechaNacimiento;
+    this.saludar = function() {
+        console.log('Hola soy ' + this.nombre);
+    };
+    this.edad = function() {const hoy = new Date(); return hoy.getFullYear() - this.fechaNacimiento.getFullYear();};
+}
+
+Prototype
+Cada función en JavaScript tiene una propiedad prototype que es un objeto. 
+Al usar proyotype afectamos a todas las instancias del tipo de objeto.
+
+Al usar en el objeto
+Persona.prototype.esMayorDeEdad = function() {
+    return this.edad() >= 18;
+}
+
+Al usar en una instancia (este ejemplo es un ERROR, porque afecta a todas las instancias)
+carla.__proto__.esMayorDeEdad = function() {
+    return false;
+}
+
+Palabra reservada class
+class Persona {
+    constructor(nombre, correo, profesion, fechaNacimiento) {
+        this.nombre = nombre;
+        this.correo = correo;
+        this.profesion = profesion;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+    saludar() {
+        console.log('Hola soy ' + this.nombre);
+    }
+    
+    edad() {
+        const hoy = new Date();
+        return hoy.getFullYear() - this.fechaNacimiento.getFullYear();
+    }
+}
+
+Al declarar objetos si osi es necesario usar la palabra reservada new,
+pero al usar la sintaxis de clase no es necesario, se puede crear un objeto directamente con la clase
+
+
+La cadena de prototipos
+Todo objeto heda de Object
+
+1. juan es una instancia de Persona
+Tiene sus propias propiedades (como nombre)
+Su prototipo interno ([[Prototype]]) apunta a Persona.prototype
+2. Persona.prototype
+Es un objeto que contiene métodos compartidos (como saludar)
+Es compartido por todas las instancias creadas con new Persona()
+3. Persona.prototype.__proto__
+Apunta a Object.prototype, el prototipo base de todos los objetos
+4. Object.prototype.__proto__
+Es null, porque está en la cima de la cadena de herencia
+
+juan instanceof Persona; // true
+juan instanceof Object; // true
+Object.getPrototypeOf(juan) === Persona.prototype; // true
+Object.getPrototypeOf(Persona.prototype) === Object.prototype; // true
+
+Funciones flecha / arrow functions
+
+
+FORMA COMÚN
+obtenerPersonaMasGrande = function (p1, p2, p3) {
+    let mayor = p1;
+    if (p2.edad() > p1.edad()) {mayor = p2;}
+    else if (p3.edad() > mayor.edad()) {mayor = p3;}
+    return mayor;
+}
+
+REESCRIBIR
+obtenerPersonaMasGrandeArrow = (p1, p2, p3) => {
+    let mayor = p1;
+    if (p2.edad() > p1.edad()) {mayor = p2;}
+    else if (p3.edad() > mayor.edad()) {mayor = p3;}
+    return mayor;
+}
+
+Importante
+No usar arrow function cuando se declaran metodos dentro de una clase u objeto
+No se puede usar arrow function dentro de una función constructora
+Se puede omitir {} si es de una sola linea
+Si tiene un parametro se pueden omitir los ()
+Mediante this tienen acceso al contexto de su declaracion
+Tienen un return implícito, es decir, si no se usan {} el resultado de la expresión se devuelve automáticamente
+Se usan en los iteradores de conjuntos
+
+Que pasa con this en las arrow functions?
+No tienen su propio this, sino que captural su valor del contexto en el que fueron definidas. Lo heredan.
+
+No usarlas dentro de metodos. Si usarlas en iteradores o funciones puras.
+
+Arrays o vectores
+Son conjuntos de datos ordenados por posiciones asociados en una variable
+Sus valores pueden ser de cualquier tipo
+
+Forma literal
+const array = ['hola', 3.14, true]
+
+Constructor Array -> espacios vacios, NO undefined
+const array2 = new Array(3) // crea un array con 3 posiciones vacias
+
+Constructor con datos
+const array3 = new Array(1, 2, 3)
+
+
+Acceder a los elementos de un array
+const frutas = ['manzana', 'banana', 'naranja'];
+console.log(frutas[0]); // manzana
+console.log(frutas[1]); // banana
+console.log(frutas[2]); // naranja
+
+Cantidad de elementos
+array.length
+
+Agregar elementos a un array
+array.push('nuevo elemento') // agrega al final
+
+Quitar el último elemento
+array.pop() // quita el último elemento y lo devuelve
+
+Agregar al inicio
+array.unshift('nuevo elemento') // agrega al inicio
+
+Quitar el primer elemento
+array.shift() // quita el primer elemento y lo devuelve
+
+Insertar, reemplazar o eliminar elementos en cualquier posición
+array.splice(1,2) // a partir del indice 1, elimina 2 elementos
+array.splice(1,0,'nuevo elemento') // a partir del indice 1, no elimina nada, pero agrega 'nuevo elemento'
+array.splice(1,1,'nuevo elemento') // a partir del indice 1, elimina 1 elemento y agrega 'nuevo elemento'
+
+Transformar cada elemento
+array.map(elemento => elemento* 2) // devuelve un nuevo array con cada elemento multiplicado por 2
+
+Filtrar elementos por condicion
+array.filter(elemento => elemento > 5) // devuelve un nuevo array con los elementos mayores a 5
+
+Iterar los elementos  (forEach no devuelve algo)
+array.forEach( elemento => console.log(elemento) ) // imprime cada elemento del array
+
+Devolver primer elemento que cumpla una condicion
+array.find(elemento => elemento > 5) 
+
+Verificar si contiene un valor
+array.includes(3) // devuelve true si el array contiene el valor 3
+
+Arrays por compresión
+const cuadrados = [for (x of {1,2,3,4,5}) x * x] // devuelve un nuevo array con los cuadrados de los numeros del 1 al 5
+
+Empaquetado y depempaquetado de objetos y arrays
+
+PARA OBJETOS
+
+En lugar de aceder a cada propiedad una a una
+const persona = { nombre: "Juan", edad: 30, correo: "juan@gmail.com" };
+const nombre = persona.nombre;
+const edad = persona.edad;
+
+Usando desempaquetado se pueden extraer en una sola linea
+const { nombre, edad } = persona;
+console.log(nombre); // "Juan"
+console.log(edad); // 30
+
+Al desempaquetar tambien se pueden renombrar variables
+const {nombre: nombrePersona} = persona;
+console.log(nombrePersona); // "Juan"
+
+Tambien se peuden agregar valores por defecto
+const {profesion = "Desconocida"} = persona;
+console.log(profesion); // "Desconocida"
+
+Empaquetar objetos
+Crear objetos sin clase
+const persona = {nombre: "Juan", edad: 30, correo: "juan@gmail.com"};
+console.log(persona.nombre)
+
+Si los nombres de varaibles coinciden con los nombres de las propiedades del objeto, se pueden empaquetar en una sola linea
+const nombre = "Juan";
+const edad = 30;
+const persona = {nombre, edad};
+
+PARA ARRAYS
+
+const numeros = [10, 20, 30];
+const [primero,segundo] = numeros;
+console.log(primero); // 10
+console.log(segundo); // 20
+
+Podemos omitir valores
+const[ , ,tercero] = numeros;
+console.log(tercero); // 30
+
+Tomar todos los elementos a partir de una posicion
+const [primero, ...resto] = numeros;
+console.log(primero); // 10
+console.log(resto); // [20, 30]
+
+
+
+*/  
