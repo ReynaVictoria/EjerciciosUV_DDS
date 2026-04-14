@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  /* 🌤️ celeste pastel fondo */
+  background: #d9f2ff;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* 🔵 NAVBAR celeste más oscuro */
+.navbar {
+  background-color: #9fd9f6 !important; /* celeste más fuerte */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* links navbar */
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #0b3c5d !important;
+  font-weight: 500;
+}
+
+/* hover links */
+.navbar .nav-link:hover {
+  color: #055a8c !important;
+}
+
+/* botón buscar */
+.btn-outline-success {
+  color: #0b3c5d;
+  border-color: #0b3c5d;
+}
+
+.btn-outline-success:hover {
+  background-color: #0b3c5d;
+  color: white;
+  border-color: #0b3c5d;
+}
+
+/* dropdown */
+.dropdown-menu {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.dropdown-item:hover {
+  background-color: #d9f2ff;
+}
+
+.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff;
+}
+
+/* navbar */
+.dark-mode .navbar {
+    background-color: #1f1f1f !important;
+}
+
+/* cards y bloques */
+.dark-mode .card,
+.dark-mode .bg-white {
+    background-color: #1e1e1e !important;
+    color: #ffffff;
+}
+
+/* botones */
+.dark-mode .btn-outline-success {
+    color: white;
+    border-color: white;
+}
+
+.dark-mode .btn-outline-success:hover {
+    background-color: white;
+    color: black;
+}
