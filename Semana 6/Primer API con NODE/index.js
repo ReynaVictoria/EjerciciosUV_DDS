@@ -36,6 +36,8 @@ app.post("/products", async(req, res) => { //PARA VER QUE FUNCIONA SE DEBE GRABA
         } catch (error) {
             res.status(500).json({ error: "Error al crear el producto" });
         }           
+
+        
 }); 
 
 
