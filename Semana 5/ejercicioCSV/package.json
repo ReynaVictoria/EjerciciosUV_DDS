@@ -1,0 +1,25 @@
+{
+  "name": "ejerciciosuv_dds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node proceso-csv/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReynaVictoria/EjerciciosUV_DDS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ReynaVictoria/EjerciciosUV_DDS/issues"
+  },
+  "homepage": "https://github.com/ReynaVictoria/EjerciciosUV_DDS#readme",
+  "dependencies": {
+    "csv-parser": "^3.2.0"
+  }
+}

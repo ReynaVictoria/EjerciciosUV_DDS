@@ -1,0 +1,13 @@
+{
+  "name": "prueba",
+  "version": "1.0.0",
+  "description": "primer ejemplo de proyecto js",
+  "license": "ISC",
+  "author": "victoria",
+  "type": "commonjs",
+  "main": "probandoNode.js",
+  "scripts": {
+    "start": "node ./probandoNode.js ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
