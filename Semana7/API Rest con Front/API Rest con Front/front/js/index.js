@@ -1,0 +1,1 @@
+//aca se haria lo de esconder los botones y eso, esta comentado en el html index que hay que hacer
