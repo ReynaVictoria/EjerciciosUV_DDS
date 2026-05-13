@@ -1,0 +1,12 @@
+1. npm install -y
+2. dependencias
+3. estructura carpetas
+4. levantar un servidor con express : const app = express()
+5. en el archivo package json poner module y el nodemon
+6. probar servidor
+7. definir cnn_sequelize -> export const cnn = new Sequelize(database, username, password, options)
+8. modelos
+9. hacer el await de la conexion en el sv y que se cree el archivo sqlite
+10. crear controller: es la parte que recibe la peticion HTTP y decide la respuesta, intermediario
+11. router: import {Router} from express y los controllers, hacer un const router = Router() y si es un get hacer el router para eso y exportar el router por default
+
