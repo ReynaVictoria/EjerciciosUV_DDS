@@ -1,4 +1,5 @@
-/*function login(){
+/*
+function login(){
 
     fetch('http://localhost:3000/login', {
         method: 'POST',
